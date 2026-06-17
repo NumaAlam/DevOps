@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- TODO: Replace placeholders with actual database credentials -->
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://185.119.119.126:1433;databaseName=bernersleedb;encrypt=true;trustServerCertificate=true</property>
+        <property name="hibernate.connection.username">bernerslee</property>
+        <property name="hibernate.connection.password">berner</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.show_sql">false</property>
+
+        <mapping class="org.example.entity.SocialMediaPost"/>
+    </session-factory>
+</hibernate-configuration>
